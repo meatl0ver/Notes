@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HomeWorkAndroid2</string>
+    <string name="date">Дата:</string>
+    <string name="date_of_create">Дата создания:</string>
 </resources>

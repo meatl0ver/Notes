@@ -1,4 +1,4 @@
-package raui.imashev.homeworkandroid2;
+package raui.imashev.homeworkandroid2.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

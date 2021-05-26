@@ -16,10 +16,16 @@ import raui.imashev.homeworkandroid2.R;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
     private final List<Note> notes;
+
     private OnItemClickListener itemClickListener;
+    private int menuPosition;
 
     public NotesAdapter(List<Note> notes) {
         this.notes = notes;
+    }
+
+    public int getMenuPosition() {
+        return menuPosition;
     }
 
     @NonNull
@@ -60,6 +66,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            registerContextMenu(itemView);
+
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
             textViewDateOfCreate = itemView.findViewById(R.id.textViewDateOfCreate);
@@ -68,8 +76,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             textViewTitle.setOnClickListener(v -> {
                 if (itemClickListener != null) {
                     itemClickListener.onItemClick(v, getAdapterPosition());
+                    menuPosition = getLayoutPosition();
                 }
             });
+        }
+
+        private void registerContextMenu(@NonNull View itemView) {
+            itemView.setOnClickListener(v -> menuPosition = getLayoutPosition());
+
         }
 
         public void setData(Note note) {

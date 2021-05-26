@@ -8,4 +8,7 @@
     <string name="_2">2</string>
     <string name="_3">3</string>
     <string name="save">SAVE</string>
+    <string name="menu_add">Добавить</string>
+    <string name="menu_clean">Очистить</string>
+    <string name="menu_update">Изменить</string>
 </resources>

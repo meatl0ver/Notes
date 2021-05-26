@@ -93,16 +93,19 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/radioHightPriority"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_1" />
 
         <RadioButton
+            android:id="@+id/radioMiddlePriority"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_2" />
 
         <RadioButton
+            android:id="@+id/radioLowPriority"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_3" />

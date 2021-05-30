@@ -13,6 +13,10 @@ import java.util.List;
 import raui.imashev.homeworkandroid2.data.Note;
 import raui.imashev.homeworkandroid2.R;
 
+import static raui.imashev.homeworkandroid2.MainActivity.PRIORITY_HIGHT;
+import static raui.imashev.homeworkandroid2.MainActivity.PRIORITY_LOW;
+import static raui.imashev.homeworkandroid2.MainActivity.PRIORITY_MIDDLE;
+
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
     private final List<Note> notes;
@@ -92,13 +96,13 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             textViewDateOfCreate.setText(note.getDateOfCreate());
             textViewDate.setText(note.getDate());
             switch (note.getPriority()) {
-                case 1:
+                case PRIORITY_HIGHT:
                     textViewTitle.setBackgroundResource(R.color.red);
                     break;
-                case 2:
+                case PRIORITY_MIDDLE:
                     textViewTitle.setBackgroundResource(R.color.yellow);
                     break;
-                case 3:
+                case PRIORITY_LOW:
                     textViewTitle.setBackgroundResource(R.color.green);
                     break;
             }

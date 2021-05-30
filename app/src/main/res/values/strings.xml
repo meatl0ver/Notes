@@ -11,4 +11,6 @@
     <string name="menu_add">Добавить</string>
     <string name="menu_clean">Очистить</string>
     <string name="menu_update">Изменить</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_refresh">обновить</string>
 </resources>

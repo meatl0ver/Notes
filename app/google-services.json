@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763687136367",
+    "project_id": "homeworkandroid2",
+    "storage_bucket": "homeworkandroid2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763687136367:android:efeed02c238e7e19e0b19a",
+        "android_client_info": {
+          "package_name": "raui.imashev.homeworkandroid2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763687136367-75red45fpsbedp54vckt4hj9is24193g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAximtiyisnKir2eHT6urTNuOmn8y0UPqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763687136367-75red45fpsbedp54vckt4hj9is24193g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

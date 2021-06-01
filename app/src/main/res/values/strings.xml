@@ -13,4 +13,8 @@
     <string name="menu_update">Изменить</string>
     <string name="action_delete">Удалить</string>
     <string name="action_refresh">обновить</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="element_deleted">Элемент удален</string>
+    <string name="deletenig_canceled">Удаление отменено</string>
+    <string name="are_you_sure">Точно удалить?</string>
 </resources>

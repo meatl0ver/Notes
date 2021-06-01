@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -135,12 +136,16 @@ public class NotesFragment extends Fragment {
                         .commit();
                 return true;
             case R.id.action_delete:
-                Note note = notes.get(position);
-                notes.remove(position);
-                db.collection(COLLECTION_NAME).document(note.getId())
-                        .delete()
-                        .addOnSuccessListener(aVoid -> Log.d(TAG_FIREBASE, "DocumentSnapshot successfully deleted!"))
-                        .addOnFailureListener(e -> Log.w(TAG_FIREBASE, "Error deleting document", e));
+                Log.d("Удаление","-1 шаг");
+                currentNoteNumber = position;
+                Bundle bundleDelete = new Bundle();
+                Log.d("Удаление","-2 шаг");
+                bundleDelete.putInt(CURRENT_NOTE_NUMBER, currentNoteNumber);
+                DialogFragment dlgCustom = new DialogBuilderFragment();
+                dlgCustom.setArguments(bundleDelete);
+                Log.d("Удаление","-3 шаг");
+                dlgCustom.show(getChildFragmentManager(), "transactionTag");
+                Log.d("Удаление","-4 шаг");
                 adapter.notifyItemRemoved(position);
                 return true;
         }

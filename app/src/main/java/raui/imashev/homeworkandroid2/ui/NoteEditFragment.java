@@ -31,6 +31,7 @@ public class NoteEditFragment extends Fragment {
 
     int currentNote;
     String currentId;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,8 +87,8 @@ public class NoteEditFragment extends Fragment {
                 note.setPriority(PRIORITY_LOW);
             }
 
-            if (currentNote==CREATE_NEW_NOTE){
-                note.setId(""+Math.random()* 1000);
+            if (currentNote == CREATE_NEW_NOTE) {
+                note.setId("" + Math.random() * 1000);
             } else {
                 note.setId(currentId);
             }

@@ -97,7 +97,7 @@ public class NotesFragment extends Fragment {
                         .commit();
                 break;
             case R.id.action_clear:
-                for (int i =0;i <notes.size();i++) {
+                for (int i = 0; i < notes.size(); i++) {
                     db.collection(COLLECTION_NAME).document(notes.get(i).getId())
                             .delete()
                             .addOnSuccessListener(aVoid -> Log.d(TAG_FIREBASE, "DocumentSnapshot successfully deleted!"))
